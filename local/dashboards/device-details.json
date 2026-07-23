@@ -907,7 +907,11 @@
         "label": "Prometheus",
         "query": "prometheus",
         "refresh": 1,
-        "current": {},
+        "current": {
+          "selected": true,
+          "text": "grafanacloud-prom",
+          "value": "grafanacloud-prom"
+        },
         "hide": 0,
         "includeAll": false,
         "multi": false,
