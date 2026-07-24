@@ -204,6 +204,10 @@ def fix_fabric_map(dash):
             pan.setdefault("options", {})
             pan["options"]["svg"] = _fabric_svg()
             pan["options"]["panelConfig"] = _fabric_config()
+            # siteConfig also pointed at the deleted upstream branch (404 -> the
+            # plugin fetched a GitHub HTML page and threw "Extra content at the end
+            # of the document"). It is optional; clear it so nothing is fetched.
+            pan["options"]["siteConfig"] = ""
     return dash
 
 
